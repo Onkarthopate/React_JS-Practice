@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Bubbling Example</title>
+</head>
+<body>
+
+  <div id="outer" style="padding: 20px; background-color: lightblue;">
+    Outer DIV
+    <div id="middle" style="padding: 20px; background-color: lightgreen;">
+      Middle DIV
+      <div id="inner" style="padding: 20px; background-color: lightcoral;">
+        Inner DIV (Click Me)
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("outer").addEventListener("click", function() {
+     setTimeout(() => {
+        console.log("Outer DIV clicked");
+     },1000 );  
+    });
+
+    document.getElementById("middle").addEventListener("click", function() {
+      setTimeout(() => {
+        console.log("Middle DIV clicked");
+        
+      }, 1000); 
+    });
+
+    document.getElementById("inner").addEventListener("click", function() {
+      setTimeout(() => {
+        console.log("Inner DIV clicked");
+      },1000 ); 
+    });
+  </script>
+
+</body>
+</html>

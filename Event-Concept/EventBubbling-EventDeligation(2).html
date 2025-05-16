@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Delegation Example</title>
+</head>
+<body>
+
+  <div id="container">
+    <button class="child-btn">Button 1</button>
+    <button class="child-btn">Button 2</button>
+    <button class="child-btn">Button 3</button>
+    <!-- button will be added dynamically -->
+  </div>
+
+  <!-- Add new button inside the container using delegation -->
+  <button id="addBtn">Add Button</button>
+
+  <script>
+
+let count = 4;
+    //  Event Delegation: one listener on parent
+    
+    document.getElementById("container").addEventListener("click", function (e) {
+      if (e.target.classList.contains("child-btn")) {
+        console.log("Clicked by delegation:", e.target.textContent);
+      }
+    });
+
+    //  Add new buttons dynamically
+    document.getElementById("addBtn").addEventListener("click", function () {
+      const newButton = document.createElement("button");
+      newButton.classList.add("child-btn");
+      newButton.textContent = "Button "+ count++;
+      document.getElementById("container").appendChild(newButton);
+    });
+  </script>
+</body>
+</html>

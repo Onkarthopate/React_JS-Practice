@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+
+    <div>
+        <p class="box">Hello from ID4!</p>
+    </div>
+    <div>
+        <p class="box">Hello from ID5!</p>
+    </div>
+    <div>
+        <p class="box">Hello from ID6!</p>
+    </div>
+
+    <button id="btn">Click</button>
+
+    <script>
+
+        let div = document.querySelectorAll(".box");
+
+        document.getElementById("btn").addEventListener("click", function () {
+            for (let i = 0; i < div.length; i++) {
+                div[i].style.backgroundColor = "aqua";
+                div[i].style.fontSize = "20px";
+                div[i].style.border = "2px solid red";
+            }
+        }
+        )
+
+        
+        console.log(div);
+
+    </script>
+</body>
+
+</html>

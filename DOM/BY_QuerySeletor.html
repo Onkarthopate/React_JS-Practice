@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+
+    <div id="b1" > <p class="box">Hello from ID4!</p></div>
+    <div  id="b1"> <p class="box">Hello from ID5!</p></div>
+    <div  id="b1"> <p class="box">Hello from ID6!</p></div>
+
+    <button id="btn">Click</button>
+
+    <script>
+
+        let div = document.querySelector(".box");
+
+         document.getElementById("btn").addEventListener("click", function () {
+                div.style.backgroundColor = "aqua";
+                div.style.fontSize = "20px";
+                div.style.border = "2px solid red";
+            }
+        )
+
+        console.log(div);
+
+    </script>
+</body>
+
+</html>

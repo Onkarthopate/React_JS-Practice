@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <div class="myBox1">Hello from ID4!</div>
+    <div class="myBox1">Hello from ID5!</div>
+    <div class="myBox1">Hello from ID6!</div>
+
+    <button id="btn">Click</button>
+
+    <script>
+
+        // let box = document.getElementsByClassName("myBox");
+
+        // document.getElementById("btn").addEventListener("click", function () {
+        //     box[0].style.backgroundColor = "aqua";
+        //     box[1].style.fontSize = "20px";
+        //     box[2].style.border = "2px solid red";
+        // })
+
+
+        let box1 = document.getElementsByClassName("myBox1");
+
+        document.getElementById("btn").addEventListener("click", function () {
+            for (let i = 0; i < box1.length; i++) {
+
+                box1[i].style.backgroundColor = "aqua";
+                box1[i].style.fontSize = "20px";
+                box1[i].style.border = "2px solid red";
+            }
+
+            console.log(box1);
+
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body>
+  <div id="myBox">Hello from ID!</div>
+  <div id="myBox">Hello from ID1!</div>
+
+  <button id="btn">Change Text</button>
+
+  <script>
+    function changeById() {
+      let box = document.getElementById("myBox");
+
+      let btn = document.getElementById("btn").addEventListener("click", function(){
+              box.style.backgroundColor = "aqua";
+              box.style.fontSize = "20px";
+              box.style.border = "2px solid red";
+      });
+    }
+
+    changeById();
+
+  </script>
+</body>
+
+</html>

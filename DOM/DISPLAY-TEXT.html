@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display-Text</title>
+</head>
+
+<body>
+
+    <div class="box">
+        <p>Hello From Nimap</p>
+    </div>
+
+    <button id="btn">Click to see magic 💕</button>
+
+    <div class="box1">
+        <p>Hello From Nimap</p>
+    </div>
+
+    <button id="btn1">Click to see magic 💕</button>
+
+    <div class="box2">
+        <p>Hello From Nimap</p>
+    </div>
+
+    <button id="btn2">Click to see magic 💕</button>
+
+    =
+    <script>let box = document.getElementsByClassName("box");
+        let box1 = document.getElementsByClassName("box1");
+        let box2 = document.getElementsByClassName("box2");
+
+        document.getElementById("btn").addEventListener("click", function () {
+            box[0].textContent = "    <b>           We   lcome</b> to Nimap Infotech  --textContent";
+            console.log(box[0].textContent); // shows all text, no HTML parsing
+        });
+
+        document.getElementById("btn1").addEventListener("click", function () {
+            box1[0].innerHTML = "    <b>           Welc   ome</b> to Nimap Infotech --innerHTML";
+            console.log(box1[0].innerHTML); // shows HTML structure
+        });
+
+        document.getElementById("btn2").addEventListener("click", function () {
+            box2[0].innerText = "    <b>           Welc  ome</b> to Nimap Infotech --innerText";
+            console.log(box2[0].innerText); // renders as text, skips HTML tags
+        });
+    </script>
+
+</body>
+
+</html>

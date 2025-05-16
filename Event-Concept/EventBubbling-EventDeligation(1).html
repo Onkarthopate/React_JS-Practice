@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and individual event listner - first approch</title>
+</head>
+<body>
+        <div id="container">
+            <button class="child-btn">button 1</button>
+            <button class="child-btn">button 2</button>
+            <button class="child-btn">button 3</button>
+        </div>
+
+        <!-- add new button manually -->
+
+        <button class="new-btn">BUTTON 4</button>
+
+
+        <script>
+            let btn = document.querySelectorAll(".child-btn");
+
+            btn.forEach((button)=>{
+                button.addEventListener("click",function(e){
+                    console.log("Clicked! : ", e.target.textContent);
+                    
+                })
+            })
+
+
+            // we write again add eventlistner when create new btn 
+
+            let newBtn = document.querySelectorAll(".new-btn");
+
+            newBtn.forEach((btn1)=>{
+                btn1.addEventListener("click",function(e){
+                console.log("Clicked! :", e.target.textContent);
+                
+            })
+            })
+        </script>
+    
+</body>
+</html>
