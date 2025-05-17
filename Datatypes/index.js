@@ -20,14 +20,14 @@ const cars = ["Saab", "Volvo", "BMW"];
 const date = new Date("2022-03-25");
 
 
-// console.log(x+y);
-// console.log(person+23+"omkara");
-// console.log(34+43-'3');
-// console.log(NaN=undefined);
-// console.log({}+[]);
-// console.log(undefined-7);
-// console.log(9+NaN);
-// console.log(Object+Object);
-// console.log(23+"omkar"-23+NaN);
-// console.log(0-undefined);
-// console.log(1+true);
+console.log(x+y); //1
+console.log(person+23+"omkara"); //undefined
+console.log(34+43-'3');//74
+console.log(NaN=undefined); //undefined   
+console.log({}+[]); //object-ojbect
+console.log(undefined-7); //nan
+console.log(9+NaN); //nan
+console.log(Object+Object); //undefined
+console.log(23+"omkar"-23+NaN); //nan
+console.log(0-undefined);//nan
+console.log(1+true); //2
