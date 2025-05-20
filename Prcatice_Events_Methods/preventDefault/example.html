@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent-Default</title>
+    <link rel="stylesheet" href="example.css">
+</head>
+
+<body>
+    <div  class="container">
+        <form action="submit.html" method="get" class="form" onsubmit="submitInfo(event)">
+            <label for="username">
+                Username:
+                <input type="text" name="username" id="username">
+            </label>
+            <br>
+            <label for="email">
+                Email:
+                <input type="email" name="email" id="email">
+            </label>
+            <br>
+            <label for="password">
+                Password:
+                <input type="password" name="password" id="password">
+            </label>
+            <br>
+            <label>
+                Gender:
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </label>
+            <br>
+            <label>
+                Skills:
+                <input type="checkbox" name="skills" value="Java"> Java
+                <input type="checkbox" name="skills" value="Php"> Php
+                <input type="checkbox" name="skills" value=".Net"> .Net
+                <input type="checkbox" name="skills" value="JS"> JS
+            </label>
+            <br>
+            <label for="country">
+                Country:
+                <select name="country" id="country">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Japan">Japan</option>
+                    <option value="China">China</option>
+                </select>
+            </label>
+            <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script>
+    function submitInfo(event) {
+        event.preventDefault(); 
+
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const gender = document.querySelector('input[name="gender"]:checked')?.value || "Not selected";
+
+        const skillElements = document.querySelectorAll('input[name="skills"]:checked');
+        const skills = Array.from(skillElements).map(skill => skill.value).join(',');
+
+        const country = document.getElementById("country").value;
+
+        const params = new URLSearchParams({
+            username,
+            email,
+            password,
+            gender,
+            skills,
+            country
+        });
+
+        window.location.href = `submit.html?${params.toString()}`;
+    }
+</script>
+
+</body>
+
+</html>

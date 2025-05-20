@@ -102,11 +102,11 @@
 
 //     if(rev == original){
 //         console.log(original , " is palindromic Number ");
-        
+
 //     }
 //     else{
 //         console.log(original , " is not Palindromic number ");
-        
+
 //     }
 // }
 
@@ -149,30 +149,90 @@
 
 // Sum of square of n prime number
 
-let n = 4;
-let sumOfSquares = 0;
-for(let i=0;i<= n ;i++){
-    if(isPrime(i)){
-        console.log(i);
-       sumOfSquares += i * i;
-    } 
-}
-
-console.log("Sum of Square is : ", sumOfSquares);
+// let sumOfSqOfPrime = 0;
+// primeNumber(10);
+// console.log(sumOfSqOfPrime);
 
 
+// function primeNumber(n){
+//     for(let i=2;i<=n;i++){
+//         if(isPrime(i)){
+//             sumOfSqOfPrime += i*i;         
+//         }        
+//     }
+// }
+
+// function isPrime(n){
+
+//     if(n <= 1) return false;
+//     for(let i=2;i<=Math.sqrt(n);i++){
+//         if( n % i == 0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// ===========================================================================
+
+// Find duplicate in array  
+
+// let arr = [2, 3, 4, 5, 2, 3, 4, 5, 2, 3, 4, 5, 2,];
+
+// let duplicate = [];
+
+//     for (let i = 0; i <= arr.length - 1; i++) {
+//         for (let j = i + 1; j <= arr.length - 1; j++) {
+//             if (arr[i] === arr[j]) {
+//                 duplicate.push(arr[i]);
+//                 break;
+//             }
+//         }
+//     }
+
+// console.log(duplicate);   // time complexity 0(n^2) so use hash set 
+
+// let freq = {};
+// for (let num of arr) {
+//     freq[num] = (freq[num] || 0) + 1;
+// }
+// let duplicates = [];
+// for (let key in freq) {
+//     if (freq[key] > 1) duplicates.push(Number(key));
+// }
+// console.log(duplicates);
+
+// =========================================================
 
 
-function isPrime(n){
+// let arr1 = [2, 3, 4, 5, 2, 3, 4, 5, 2, 3,45, 4, 5, 2];
 
-    if(n <= 1) return false;
-    
-for(let i=2 ; i<= Math.sqrt(n);i++){
+// let uniqueArr = [...new Set(arr1)];
 
-    if( n % i ===0){
+// console.log(uniqueArr); 
 
-        return false
+// ==============================================================
+
+
+let arr = [80, 20, 10, 90, 40, 60, 50, 50];
+let AllPairs = [];
+
+function sumOfPairs(arr){
+
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            if((arr[i] + arr[j]) === 100){
+                AllPairs.push([arr[i],arr[j]]);
+            }
+        }
     }
+
+    return AllPairs;
 }
-return true;
-}
+
+console.log(sumOfPairs(arr));
+
+
+
+
+
