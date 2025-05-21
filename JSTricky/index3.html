@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="throttleBtn">Click Me (Throttle)</button>
+<button id="debounceBtn">Click Me (Debounce)</button>
+
+<script>
+    // --- Throttle function ---
+function throttle(func, delay) {
+  let canRun = true;
+  return function () {
+    if (!canRun) return;
+    func();
+    canRun = false;
+    setTimeout(() => {
+      canRun = true;
+    }, delay);
+  };
+}
+
+--- Debounce function ---
+function debounce(func, delay) {
+  let timer;
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func();
+    }, delay);
+  };
+}
+
+// Function to call
+function logThrottle() {
+  console.log('Throttled function called at', new Date().toLocaleTimeString());
+}
+
+function logDebounce() {
+  console.log('Debounced function called at', new Date().toLocaleTimeString());
+}
+
+// Attach events
+document.getElementById('throttleBtn').addEventListener('click', throttle(logThrottle, 2000));
+document.getElementById('debounceBtn').addEventListener('click', debounce(logDebounce, 2000));
+
+</script>
+</body>
+</html>

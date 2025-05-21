@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="debounceClick()">Click (Debounce)</button>
+
+<script>
+  let timer;
+
+  function debounceClick() {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      console.log("Debounce: Clicked!");
+    }, 2000); // Only logs 2 seconds after last click
+  }
+</script>
+
+</body>
+</html>
