@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Capturing </title>
+</head>
+
+<body>
+    <div id="outer" style="padding: 20px; background-color: rgb(129, 201, 224);">
+        Outer DIV
+        <div id="inner" style="padding: 20px; background-color: rgb(116, 228, 116);">
+            Inner DIV
+            <div id="Innerest-Inner" style="padding: 20px; background-color: rgb(210, 24, 123);">
+                Innerest-Inner DIV
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('outer').addEventListener('click', function () {
+            console.log('Outer DIV - Capturing');
+        }, true);
+
+        document.getElementById('inner').addEventListener('click', function () {
+            console.log('Inner DIV - Capturing');
+        }, true);
+
+        document.getElementById('Innerest-Inner').addEventListener('click', function () {
+            console.log('Innerest-Inner DIV - Capturing');
+        }, true);
+
+    </script>
+</body>
+
+</html>

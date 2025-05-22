@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without-Deligation</title>
+</head>
+
+<body>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        const listItems = document.querySelectorAll('#itemList li');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                alert(`You clicked on ${item.textContent}`);
+            });
+        });
+
+
+        // if new item is added
+
+        const newItem = document.createElement('li');
+        newItem.textContent = 'Item 4';
+        document.getElementById('itemList').appendChild(newItem);
+
+        // ❗ You MUST add event listener again:
+        newItem.addEventListener('click', () => {
+            alert(`You clicked on ${newItem.textContent}`);
+        });
+
+    </script>
+</body>
+
+</html>

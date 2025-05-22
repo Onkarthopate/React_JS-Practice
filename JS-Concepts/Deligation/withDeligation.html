@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With-Deligation</title>
+</head>
+
+<body>
+    <ul id="items">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul> 
+
+    <script>
+        // attach event listener on parent
+       let ul =  document.querySelector("#items");
+       ul.addEventListener("click", function(event) {
+            if (event.target.tagName === "LI") {
+                alert(`Clicked on ${event.target.textContent}`);
+            }
+        });
+
+
+        // if new item added
+
+        let newItem = document.createElement("li");
+        newItem.textContent = "item 4";
+        ul.appendChild(newItem);
+
+    </script>
+</body>
+
+
+</html>

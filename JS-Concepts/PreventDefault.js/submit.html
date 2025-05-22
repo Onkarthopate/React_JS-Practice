@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted</title>
+</head>
+<body>
+    <h2>Form Submitted Successfully!</h2>
+    <h4>Here is the preview of your information</h4>
+
+    <p>Name: <span id="Name"></span></p>
+    <p>Email: <span id="Email"></span></p>
+    <p>Password: <span id="Password"></span></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const password = sessionStorage.getItem("password");
+
+        document.getElementById("Name").textContent = params.get("name");
+        document.getElementById("Email").textContent = params.get("email");
+        document.getElementById("Password").textContent = password;
+
+        
+    </script>
+</body>
+</html>

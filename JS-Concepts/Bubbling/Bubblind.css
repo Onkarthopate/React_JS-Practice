@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Container {
+    background: rgb(192, 82, 82);
+    height: 530px;
+    border: 1px solid black;
+    padding-top: 1rem;
+    font-size: 19px;
+}
+
+.Main-Container {
+    background: rgb(66, 197, 72);
+    height: 360px;
+    border: 1px solid black;
+    padding-top: 1rem;
+    font-size: 19px;
+    margin-top: 3rem;
+}
+
+.Grand-parent-container {
+    background: rgb(39, 51, 160);
+    height: 250px;
+    border: 1px solid black;
+    padding-top: 1rem;
+    font-size: 19px;
+    margin-top: 2rem;
+
+}
+
+.parent-container {
+    background: rgb(220, 30, 175);
+    height: 150px;
+    border: 1px solid black;
+    padding-top: 1rem;
+    font-size: 19px;
+    margin-top: 2rem;
+
+}
+
+.child-container {
+    background: rgb(239, 197, 31);
+    height: 30px;
+    border: 1px solid black;
+    padding-top: 1rem;
+    font-size: 19px;
+    margin-top: 2rem;
+
+}
