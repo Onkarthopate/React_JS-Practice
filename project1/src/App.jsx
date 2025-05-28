@@ -1,7 +1,18 @@
 import './App.css'
 
+
+// import OneExample from './conditionalRendering/One-Example'
+
+import MergeExample from './ToggleCase/MergeExample'
+
+// import ToggleExample from './ToggleScreen/ToggleBasic'
+
+// import  OneExample  from './conditionalRendering/One-Example'
+
+// import BasicExample from './conditionalRendering/BasicExample'
+
 // import CompA from './Props/A.Info-Example'
-import ExampleState from './states/ExampleState'
+// import ExampleState from './states/ExampleState'
 
 // import ExampleProps from './Props/ExampleProps'
 
@@ -16,7 +27,7 @@ import ExampleState from './states/ExampleState'
 
 function App() {
 
-  
+
   return (
     <>
       {/* <BasicExample /> */}
@@ -31,7 +42,16 @@ function App() {
       {/* <CompA/> */}
 
 
-      <ExampleState/>
+      {/* <ExampleState/> */}
+
+
+      {/* <BasicExample/> */}
+
+
+
+      {/* <OneExample/> */}
+
+      <MergeExample/>
 
 
     </>
