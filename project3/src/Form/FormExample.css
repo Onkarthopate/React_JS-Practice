@@ -1,0 +1,157 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.title-heading{
+    padding: 14px;
+    width: 260px;
+    margin: 0 auto;
+    border-bottom: 2px solid #63a5f1;
+    text-align: center;
+}
+
+.form-main-Container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 30px 20px;
+}
+
+.form-Container {
+  background-color: #efe6e6;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.form-Container > div {
+  margin-bottom: 17px;
+}
+
+.form-Container label {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: 600;
+  padding-left: 4px;
+}
+
+.form-Container input[type="text"],
+.form-Container input[type="email"],
+.form-Container input[type="phone"],
+.form-Container input[type="number"],
+.form-Container input[type="file"],
+.form-Container select,
+.form-Container .other-skills {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+.form-Container input:focus,
+.form-Container select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.Gender-feild,
+.Skill-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.Skill-field label,
+.Gender-feild label {
+  margin-right: 10px;
+}
+
+.Skill-field input[type="checkbox"],
+.Gender-feild input[type="radio"] {
+  margin-right: 5px;
+  width: 15.5px;
+}
+
+.salary-feild {
+  display: flex;
+  gap: 15px;
+}
+
+.salary-feild > div {
+  flex: 1;
+}
+
+.submit-reset-form {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.submitForm input,
+.resetForm input,
+.printForm button{
+  width: 100px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+
+.submitForm input {
+  background-color: #28a745;
+}
+
+.submitForm input:hover {
+  background-color: #218838;
+}
+
+.resetForm input {
+  background-color: #dc3545;
+}
+
+.resetForm input:hover {
+  background-color: #c82333;
+}
+
+.printForm button {
+  background-color: #4b4bee;
+}
+
+.printForm button:hover {
+  background-color: #1916e5;
+}
+
+
+input[type="file"] {
+  border: none;
+  padding: 0;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #007bff;
+  border: none;
+  padding: 6px 12px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #0056b3;
+}
