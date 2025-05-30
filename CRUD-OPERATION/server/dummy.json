@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "dob": "1990-05-15",
+    "gender": "male",
+    "role": "Java Developer"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "dob": "1995-09-20",
+    "gender": "female",
+    "role": "Frontend Developer"
+  },
+  {
+    "id": 3,
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "dob": "1993-02-10",
+    "gender": "female",
+    "role": "UI/UX Developer"
+  },
+  {
+    "id": 4,
+    "name": "Bob Williams",
+    "email": "bob.williams@example.com",
+    "dob": "1988-12-01",
+    "gender": "male",
+    "role": "QA Developer"
+  },
+  {
+    "id": 5,
+    "name": "Eve Brown",
+    "email": "eve.brown@example.com",
+    "dob": "1992-07-25",
+    "gender": "female",
+    "role": "Java Developer"
+  },
+  {
+    "name": "peter parker",
+    "email": "peter@2gmail.com",
+    "dob": "2025-05-01",
+    "gender": "male",
+    "role": "Frontend Developer",
+    "id": 1748606905855
+  }
+]
