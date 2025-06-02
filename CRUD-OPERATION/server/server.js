@@ -1,5 +1,5 @@
-const express  = require('express');
-const app =  express();
+const express = require('express');
+const app = express();
 const cors = require("cors");
 const fs = require('fs');
 const path = require('path');
@@ -42,6 +42,12 @@ app.get('/users/:id', (req, res) => {
 // CREATE a new user
 app.post('/users', (req, res) => {
   const data = readData();
+  const { name, email } = req.body;
+
+  const existingUser = data.find(user => user.name === name && user.email === email);
+  if (existingUser) {
+     return res.status(400).json({message : "User Already exists by this name and email"});
+  }
   const newUser = { ...req.body, id: Date.now() }; // Using Date.now() as ID
   data.push(newUser);
   writeData(data);

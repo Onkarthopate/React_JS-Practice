@@ -26,7 +26,10 @@ function UserManager() {
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err));
+
   };
+
+
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -60,7 +63,13 @@ function UserManager() {
         role: formData.role,
       }),
     })
-      .then((res) => res.json())
+      .then(async (res) => {
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.message || "Error occurred! User already exists");
+        }
+        return ;
+      })
       .then(() => {
         alert(editId ? "User updated!" : "User created!");
         handleReset();
