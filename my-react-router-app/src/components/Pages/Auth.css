@@ -1,0 +1,45 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.auth-card {
+  width: 350px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.auth-face {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.auth-login {
+  transform: rotateY(0deg);
+}
+
+.auth-signup {
+  transform: rotateY(180deg);
+}
+
+.flip .auth-login {
+  transform: rotateY(-180deg);
+}
+
+.flip .auth-signup {
+  transform: rotateY(0deg);
+}
+
+.switch-text {
+  cursor: pointer;
+  color: blue;
+  font-size: 14px;
+}
