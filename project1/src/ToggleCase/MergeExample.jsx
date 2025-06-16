@@ -9,7 +9,7 @@ import './Merged.css';
 function MergeExample() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Fetch user data
   useEffect(() => {

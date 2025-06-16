@@ -5,7 +5,7 @@
 // import UseEffectWithD  epsExample from './Hooks/UseEffectHook-1-Case'
 // import UseEffectOnceExample from './Hooks/UseEffectHook-1-Case'
 
-// import UseContextHook from './Hooks/UseContextHook'
+import UseContextHook from './Hooks/UseContextHook'
 // import NoUseEffectExample from './Hooks/UseEffectHook-1-Case'
 
 // import EventHandling from './handlingEvents/EventHandling'
@@ -32,7 +32,7 @@ function App() {
       {/* <HookUseState/> */}
       {/* <HookUseStateDarkMode/> */}
 
-      {/* <UseContextHook/> */}
+      <UseContextHook/>
 
       {/* <NoUseEffectExample/> */}
 

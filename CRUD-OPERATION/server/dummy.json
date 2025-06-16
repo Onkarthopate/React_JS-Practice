@@ -32,14 +32,6 @@
     "role": "QA Developer"
   },
   {
-    "id": 5,
-    "name": "Eve Brown",
-    "email": "eve.brown@example.com",
-    "dob": "1992-07-25",
-    "gender": "female",
-    "role": "Java Developer"
-  },
-  {
     "name": "peter parker",
     "email": "peter@2gmail.com",
     "dob": "2025-05-01",
@@ -54,5 +46,13 @@
     "gender": "male",
     "role": "QA Developer",
     "id": 1748838303121
+  },
+  {
+    "name": "peter parker",
+    "email": "peter2@gmail.com",
+    "dob": "2025-06-11",
+    "gender": "male",
+    "role": "QA Developer",
+    "id": 1749904553929
   }
 ]

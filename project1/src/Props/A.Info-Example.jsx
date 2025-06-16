@@ -23,8 +23,8 @@ function CompA() {
         <div>
             <h2>Display User Informations:</h2>
             {
-                userInfo.map((user,index)=>(
-                   <CompB key = {index}  user={user}/>
+                userInfo.map((user)=>(
+                   <CompB user={user}/>
 
                 ))
             }

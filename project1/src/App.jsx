@@ -1,5 +1,7 @@
 import './App.css'
 
+// import ToggleExample from './ToggleCase/ToggleExample'
+
 
 // import OneExample from './conditionalRendering/One-Example'
 
@@ -20,7 +22,7 @@ import MergeExample from './ToggleCase/MergeExample'
 // import UsersTable from './ClassComponent/One-Example-For_All'
 // import { LifeCycleMethod2 } from './ClassComponent/UnMounting-LifeCycleMethods'
 // import { LifeCycleMethod1 } from './ClassComponent/Updating-LifeCycleMethods'
-// import { LifeCycleMethod } from './ClassComponent/Mounting-LifeCycleMethods'
+// import { LifeCycleMethod } from './ClassComponent/LifeCycleMethods'
 
 // import BasicExample from './FunctionalComponent/BacisExample'
 // import { BasicExample } from './ClassComponent/basicExample'
@@ -50,6 +52,10 @@ function App() {
 
 
       {/* <OneExample/> */}
+
+      {/* <ToggleExample/> */}
+
+
 
       <MergeExample/>
 
