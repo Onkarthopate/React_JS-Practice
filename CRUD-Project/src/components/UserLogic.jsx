@@ -1,6 +1,12 @@
-import { useState } from "react";
-import UserForm from "./UserForm";
-import UserTable from "./UserTable";
+import React, { Suspense, useState } from "react";
+import UserForm from './UserForm';
+import UserTable from './/UserTable';
+
+
+// const UserForm =React.lazy(()=>import('./UserForm'));
+// const UserTable = React.lazy(()=>import('./UserTable'))
+
+
 
 function UserLogic() {
     const [data, setData] = useState({
@@ -28,7 +34,7 @@ function UserLogic() {
         e.preventDefault();
         console.log("Form submitted:", data);
 
-         if (edit !== null) {
+        if (edit !== null) {
             const updatedUsers = [...users];
             updatedUsers[edit] = data;
             setUsers(updatedUsers);
@@ -60,13 +66,24 @@ function UserLogic() {
 
     return (
         <div>
-            <UserForm
-                data={data}
-                handleChange={handleChange}
-                handleSubmit={handleSubmit}
-            />
-            <br />
-            <UserTable data={users} handleDelete={handleDelete} handleEdit={handleEdit} edit = {edit} />
+            {/* <Suspense fallback={<div>Loading</div>}>
+                <UserForm
+                    data={data}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                />
+                <br />
+                <UserTable data={users} handleDelete={handleDelete} handleEdit={handleEdit} edit={edit} />
+            </Suspense> */}
+
+             <UserForm
+                    data={data}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                />
+                <br />
+                <UserTable data={users} handleDelete={handleDelete} handleEdit={handleEdit} edit={edit} />
+
         </div>
 
 

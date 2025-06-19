@@ -1,10 +1,18 @@
 import UserLogic from './components/UserLogic'
 
+import React, { Suspense } from "react"
+
+// const UserLogic = React.lazy(() => import("./components/UserLogic"))
+
 function App() {
 
   return (
     <>
-     <UserLogic/>
+      {/* <Suspense fallback={<div>Loading...</div>}>
+        <UserLogic />
+      </Suspense> */}
+
+      <UserLogic/>
 
     </>
   )
