@@ -1,0 +1,10 @@
+/* Popup.css */
+.popup {
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 1rem;
+  z-index: 1000;
+  min-width: 200px;
+}
